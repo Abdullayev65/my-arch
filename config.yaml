@@ -1,0 +1,11 @@
+base_url: https://mind-store.jprq.live
+port: 8765
+debug_mode: true
+db:
+  username: postgres
+  password: 1
+  db_name: mind
+  port: 5432
+jwt_token:
+  expiring_duration: 12h
+  secrete_key: "secrete_key"
