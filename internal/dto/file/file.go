@@ -2,12 +2,31 @@ package file
 
 import (
 	"mime/multipart"
-	"mindstore/pkg/hash-types"
 )
 
 type List struct {
-	Id       hash.Int
-	MindId   hash.Int `json:",omitempty"`
+	Id       int
+	MindId   int `json:",omitempty"`
+	Url      string
+	Name     string
+	HashedId *int
+	Access   int
+	Size     int64
+}
+
+type Detail struct {
+	Id       int
+	MindId   int `json:",omitempty"`
+	Url      string
+	Name     string
+	HashedId *int
+	Access   int
+	Size     int64
+}
+
+type Update struct {
+	Id       int
+	MindId   int `json:",omitempty"`
 	Url      string
 	Name     string
 	HashedId *int
@@ -17,19 +36,38 @@ type List struct {
 
 type CreateWithMind struct {
 	Files     []*multipart.FileHeader
-	CreatedBy *hash.Int `form:"-"`
-	MindId    *hash.Int
+	CreatedBy *int `form:"-"`
+	MindId    *int
+	Access    int
+}
+type Create struct {
+	Files     []*multipart.FileHeader
+	CreatedBy *int `form:"-"`
+	MindId    *int
 	Access    int
 }
 
 type MindFile struct {
-	MindId hash.Int
-	FileId hash.Int
+	MindId int
+	FileId int
 }
 
 type DeleteMind struct {
-	MindId    hash.Int
-	FileId    hash.Int
-	UserId    hash.Int
-	DeletedBy hash.Int
+	MindId    int
+	FileId    int
+	UserId    int
+	DeletedBy int
+}
+type Delete struct {
+	MindId    int
+	FileId    int
+	UserId    int
+	DeletedBy int
+}
+
+type Filter struct {
+	MindId    int
+	FileId    int
+	UserId    int
+	DeletedBy int
 }

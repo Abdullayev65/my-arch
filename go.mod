@@ -6,14 +6,10 @@ require (
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/gin-contrib/cors v1.4.0
 	github.com/gin-gonic/gin v1.9.0
-	github.com/go-playground/validator/v10 v10.11.2
 	github.com/go-summer-dev/defaultcase v0.0.0-20230415151735-52562d98e2e5
-	github.com/go-summer-dev/json v1.0.2
-	github.com/go-summer-dev/marshaling v0.0.0-20230415145934-7ce33ad50b88
 	github.com/iancoleman/strcase v0.2.0
 	github.com/jmoiron/sqlx v1.3.5
 	github.com/lib/pq v1.10.8
-	github.com/speps/go-hashids/v2 v2.0.1
 	golang.org/x/crypto v0.6.0
 	golang.org/x/exp v0.0.0-20230321023759-10a507213a29
 	gopkg.in/yaml.v3 v3.0.1
@@ -25,6 +21,7 @@ require (
 	github.com/gin-contrib/sse v0.1.0 // indirect
 	github.com/go-playground/locales v0.14.1 // indirect
 	github.com/go-playground/universal-translator v0.18.1 // indirect
+	github.com/go-playground/validator/v10 v10.11.2 // indirect
 	github.com/goccy/go-json v0.10.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/klauspost/cpuid/v2 v2.0.9 // indirect

@@ -18,21 +18,23 @@ func (h *Handler) GetFile(c *gin.Context) {
 	userId := int(0)
 
 	if userIdPtr, ok := h.authMW.GetUserId(c); ok {
-		userId = *userIdPtr
+		userId = userIdPtr
 	}
+	_ = userId
 
-	var fileId int
-	err := fileId.UnhashStr(c.Param("id"))
-	if err != nil {
-		FailErr(c, err)
-		return
-	}
-
-	path, err := h.file.GetPathById(c, fileId, userId)
-	if err != nil {
-		FailErr(c, err)
-		return
-	}
+	//var fileId int
+	//err := fileId.UnhashStr(c.Param("id"))
+	//if err != nil {
+	//	FailErr(c, err)
+	//	return
+	//}
+	//
+	//path, err := h.file.GetPathById(c, fileId, userId)
+	//if err != nil {
+	//	FailErr(c, err)
+	//	return
+	//}
+	path := "./"
 
 	c.File(path)
 }

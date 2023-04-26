@@ -1,12 +1,11 @@
 package model
 
 import (
-	"mindstore/internal/object/model/submodel"
-	"mindstore/pkg/hash-types"
+	"my-arch/internal/model/submodel"
 )
 
 type MindFile struct {
-	MindId hash.Int
-	FileId hash.Int
+	MindId int
+	FileId int
 	submodel.BasicTimeModel
 }

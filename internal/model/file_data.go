@@ -1,10 +1,11 @@
 package model
 
 import (
-	"mindstore/internal/object/dto/file"
-	"mindstore/internal/object/model/submodel"
-	"mindstore/pkg/config"
+	"my-arch/internal/dto/file"
+	"my-arch/internal/model/submodel"
+	"my-arch/internal/pkg/config"
 	"path"
+	"strconv"
 )
 
 type FileData struct {
@@ -20,7 +21,7 @@ type FileData struct {
 func (f *FileData) MapToList() *file.List {
 	return &file.List{
 		Id:       f.Id,
-		Url:      path.Join(config.GetFilesBaseUrl(), f.Id.HashToStr()),
+		Url:      path.Join(config.GetFilesBaseUrl(), strconv.Itoa(f.Id)),
 		Name:     f.Name,
 		HashedId: f.HashedId,
 		Access:   f.Access,

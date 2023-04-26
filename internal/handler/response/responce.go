@@ -2,7 +2,6 @@ package response
 
 import (
 	"github.com/gin-gonic/gin"
-	"mindstore/pkg/render"
 )
 
 func Success(c *gin.Context, res any) {
@@ -42,5 +41,5 @@ func FailErr(c *gin.Context, err error) {
 }
 
 func json200(c *gin.Context, output any) {
-	c.Render(200, render.JSON{Data: output})
+	c.JSON(200, output)
 }

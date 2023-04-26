@@ -1,12 +1,11 @@
 package model
 
 import (
-	"mindstore/pkg/hash-types"
 	"time"
 )
 
 type User struct {
-	Id         hash.Int
+	Id         int
 	Username   string
 	Email      *string
 	MindId     *int
@@ -15,7 +14,7 @@ type User struct {
 	MiddleName *string
 	LastName   *string
 	BirthDate  *time.Time
-	AvatarId   *hash.Int
+	AvatarId   *int
 	// hidden fields
 	CreatedBy *int
 	DeletedBy *int

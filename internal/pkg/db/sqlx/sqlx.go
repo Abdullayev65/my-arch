@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"github.com/iancoleman/strcase"
 	"github.com/jmoiron/sqlx"
-	"mindstore/pkg/config"
+	"my-arch/internal/pkg/config"
 )
 
 func New() (*sqlx.DB, error) {

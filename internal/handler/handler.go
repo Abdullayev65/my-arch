@@ -1,12 +1,11 @@
 package handler
 
 import (
-	"mindstore/internal/handler/mw"
-	"mindstore/internal/handler/v1/auth"
-	"mindstore/internal/handler/v1/file"
-	"mindstore/internal/handler/v1/mind"
-	"mindstore/internal/handler/v1/user"
-	"mindstore/internal/service"
+	"my-arch/internal/handler/mw"
+	"my-arch/internal/handler/v1/auth"
+	"my-arch/internal/handler/v1/file"
+	"my-arch/internal/handler/v1/user"
+	"my-arch/internal/service"
 )
 
 var (
@@ -20,6 +19,5 @@ func init() {
 	*MW = *mw.New(service.Auth)
 	*Auth = *auth.New(service.Auth)
 	*User = *user.New(service.User, MW)
-	*Mind = *mind.New(MW, service.Mind, service.File)
 	*File = *file.New(MW, service.File)
 }

@@ -5,10 +5,10 @@ import (
 )
 
 type BasicModel struct {
-	Id hash.Int `bun:"id,pk,autoincrement"`
+	Id int `bun:"id,pk,autoincrement"`
 	BasicTimeModel
-	CreatedBy hash.Int  `bun:"created_by"`
-	DeletedBy *hash.Int `bun:"deleted_by"`
+	CreatedBy int  `bun:"created_by"`
+	DeletedBy *int `bun:"deleted_by"`
 }
 
 type BasicTimeModel struct {
